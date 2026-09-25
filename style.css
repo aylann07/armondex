@@ -1,0 +1,910 @@
+/* =====================================
+   CONFIGURACIÓN GENERAL
+===================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --rojo: #df2525;
+    --rojo-oscuro: #a82626;
+
+    --amarillo: #f0d352;
+
+    --azul: #2563eb;
+
+    --fondo: #ffffff;
+
+    --blanco: #ffffff;
+
+    --texto: #20232a;
+
+    --gris: #6b7280;
+
+}
+
+
+body {
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fondo);
+
+    color: var(--texto);
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+    border: none;
+
+}
+
+
+/* =====================================
+   PANTALLA INICIAL
+===================================== */
+
+.inicio {
+
+    min-height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #fff4f4,
+            #eef4ff
+        );
+
+}
+
+
+/* =====================================
+   CONTENIDO
+===================================== */
+
+.contenido-inicio {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 600px;
+
+}
+
+
+.contenido-inicio h1 {
+
+    font-size: 70px;
+
+    font-weight: 900;
+
+    color: var(--rojo);
+
+    letter-spacing: 3px;
+
+    margin-top: 25px;
+
+    text-shadow:
+        3px 3px 0 var(--texto);
+
+}
+
+
+.contenido-inicio p {
+
+    font-size: 19px;
+
+    color: var(--gris);
+
+    line-height: 1.6;
+
+    margin:
+        20px auto 35px;
+
+    max-width: 500px;
+
+}
+
+
+/* =====================================
+   POKÉBALL
+===================================== */
+
+.pokeball {
+
+    width: 120px;
+
+    height: 120px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            var(--rojo) 0%,
+            var(--rojo) 46%,
+            #222 46%,
+            #222 54%,
+            white 54%,
+            white 100%
+        );
+
+    border:
+        7px solid #222;
+
+    position: relative;
+
+    animation:
+        flotar 3s ease-in-out infinite;
+
+}
+
+
+.pokeball-centro {
+
+    position: absolute;
+
+    width: 35px;
+
+    height: 35px;
+
+    background: white;
+
+    border: 6px solid #222;
+
+    border-radius: 50%;
+
+    top: 50%;
+
+    left: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+}
+
+
+@keyframes flotar {
+
+    0%, 100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+
+    }
+
+}
+
+
+/* =====================================
+   BOTONES
+===================================== */
+
+.botones-inicio {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.boton {
+
+    width: 280px;
+
+    padding:
+        16px 25px;
+
+    border-radius: 12px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
+
+}
+
+
+.boton:hover {
+
+    transform:
+        translateY(-3px);
+
+}
+
+
+.boton-ar {
+
+    background:
+        var(--rojo);
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px
+        rgba(230,57,70,0.3);
+
+}
+
+
+.boton-ar:hover {
+
+    background:
+        var(--rojo-oscuro);
+
+}
+
+
+.boton-coleccion {
+
+    background: white;
+
+    color: var(--texto);
+
+    border:
+        2px solid #e5e7eb;
+
+}
+
+
+.boton-coleccion:hover {
+
+    border-color:
+        var(--texto);
+
+}
+
+
+/* =====================================
+   POKÉMON DECORATIVOS
+===================================== */
+
+.pokemon-decorativo {
+
+    position: absolute;
+
+    font-size: 70px;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+
+}
+
+
+.pokemon-1 {
+
+    top: 15%;
+
+    left: 15%;
+
+}
+
+
+.pokemon-2 {
+
+    bottom: 15%;
+
+    right: 15%;
+
+    animation-delay:
+        1s;
+
+}
+
+
+.pokemon-3 {
+
+    top: 15%;
+
+    right: 15%;
+
+    animation-delay:
+        2s;
+
+}
+
+
+.pokemon-4 {
+
+    bottom: 15%;
+
+    left: 15%;
+
+    animation-delay:
+        1s;
+
+}
+
+
+
+
+/* =====================================
+   PANTALLAS
+===================================== */
+
+.pantalla-ar,
+.pantalla-coleccion {
+
+    min-height: 100vh;
+
+    padding:
+        100px 7% 60px;
+
+    background:
+        var(--fondo);
+
+}
+
+
+/* =====================================
+   VOLVER
+===================================== */
+
+.boton-volver {
+
+    background: white;
+
+    padding:
+        10px 18px;
+
+    border-radius: 10px;
+
+    color: var(--texto);
+
+    font-weight: bold;
+
+    margin-bottom: 30px;
+
+}
+
+
+.boton-volver i {
+
+    margin-right: 8px;
+
+}
+
+
+/* =====================================
+   TÍTULOS
+===================================== */
+
+.titulo-seccion {
+
+    text-align: center;
+
+    margin-bottom: 40px;
+
+}
+
+
+.titulo-seccion span {
+
+    color: var(--rojo);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.titulo-seccion h2 {
+
+    font-size: 42px;
+
+    margin:
+        8px 0 10px;
+
+}
+
+
+.titulo-seccion p {
+
+    color: var(--gris);
+
+}
+
+
+/* =====================================
+   VISOR AR
+===================================== */
+
+.visor-ar {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    height: 500px;
+
+    margin:
+        0 auto 30px;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #ffffff,
+            #e8edf5
+        );
+
+    border-radius: 25px;
+
+    border:
+        3px solid white;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0,0,0,0.1);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.modelo-placeholder {
+
+    text-align: center;
+
+    color: #9ca3af;
+
+}
+
+
+.modelo-placeholder i {
+
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================
+   INFORMACIÓN POKÉMON
+===================================== */
+
+.pokemon-info {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.08);
+
+}
+
+
+.pokemon-info img {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+}
+
+
+.numero {
+
+    color: var(--gris);
+
+    font-weight: bold;
+
+}
+
+
+.pokemon-datos h2 {
+
+    font-size: 40px;
+
+    margin:
+        5px 0 10px;
+
+}
+
+
+.tipo {
+
+    display: inline-block;
+
+    padding:
+        7px 15px;
+
+    border-radius: 20px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.electrico {
+
+    background:
+        #fff3a3;
+
+    color:
+        #8a6500;
+
+}
+
+
+.pokemon-datos p {
+
+    margin-top: 15px;
+
+    color: var(--gris);
+
+    line-height: 1.6;
+
+}
+
+
+/* =====================================
+   ACCIONES
+===================================== */
+
+.acciones-pokemon {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.boton-guardar {
+
+    background:
+        var(--amarillo);
+
+    color:
+        #222;
+
+}
+
+
+/* =====================================
+   COLECCIÓN
+===================================== */
+
+.coleccion {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+
+}
+
+
+/* =====================================
+   CARTA
+===================================== */
+
+.pokemon-card {
+
+    background: white;
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0,0,0,0.08);
+
+    transition:
+        transform 0.25s;
+
+}
+
+
+.pokemon-card:hover {
+
+    transform:
+        translateY(-8px);
+
+}
+
+
+.card-imagen {
+
+    height: 240px;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #fff
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.card-imagen img {
+
+    width: 180px;
+
+    height: 180px;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.3s;
+
+}
+
+
+.pokemon-card:hover
+.card-imagen img {
+
+    transform:
+        scale(1.1);
+
+}
+
+
+.card-info {
+
+    padding: 20px;
+
+}
+
+
+.card-info > span {
+
+    color: var(--gris);
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+}
+
+
+.card-info h3 {
+
+    font-size: 25px;
+
+    margin:
+        5px 0;
+
+}
+
+
+.card-info p {
+
+    color: var(--gris);
+
+    margin-bottom: 15px;
+
+}
+
+
+.card-info button {
+
+    width: 100%;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background:
+        #f3f4f6;
+
+    font-weight: bold;
+
+}
+
+
+.card-info button:hover {
+
+    background:
+        #e5e7eb;
+
+}
+
+
+/* =====================================
+   RESPONSIVE
+===================================== */
+
+@media (max-width: 800px) {
+
+
+    .contenido-inicio h1 {
+
+        font-size: 50px;
+
+    }
+
+
+    .pokemon-decorativo {
+
+        font-size: 45px;
+
+    }
+
+
+    .pokemon-info {
+
+        flex-direction: column;
+
+        text-align: center;
+
+    }
+
+
+    .pokemon-datos h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .coleccion {
+
+        grid-template-columns: 1fr;
+
+        max-width: 400px;
+
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+
+    .inicio {
+
+        padding:
+            20px;
+
+    }
+
+
+    .contenido-inicio h1 {
+
+        font-size: 40px;
+
+    }
+
+
+    .contenido-inicio p {
+
+        font-size: 16px;
+
+    }
+
+
+    .boton {
+
+        width: 100%;
+
+    }
+
+
+    .pokemon-decorativo {
+
+        display: none;
+
+    }
+
+
+    .pantalla-ar,
+    .pantalla-coleccion {
+
+        padding:
+            80px 20px 40px;
+
+    }
+
+
+    .visor-ar {
+
+        height: 400px;
+
+    }
+
+}

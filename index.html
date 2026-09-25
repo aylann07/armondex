@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pokémon AR</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- ==============================
+         PANTALLA PRINCIPAL
+    =============================== -->
+
+    <main class="inicio">
+
+        <div class="contenido-inicio">
+
+            <div class="pokeball">
+                <div class="pokeball-centro"></div>
+            </div>
+
+
+            <h1>ARMONDEX</h1>
+
+            <p>
+                Descubre Pokémon en realidad aumentada
+                y crea tu propia colección.
+            </p>
+
+
+            <div class="botones-inicio">
+
+                <button class="boton boton-ar">
+
+                    <i class="fa-solid fa-camera"></i>
+
+                    Iniciar experiencia AR
+
+                </button>
+
+
+                <button class="boton boton-coleccion">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Mi colección
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- Pokémon decorativos -->
+
+        <div class="pokemon-decorativo pokemon-1">
+            ⚡
+        </div>
+
+        <div class="pokemon-decorativo pokemon-2">
+            🔥
+        </div>
+
+        <div class="pokemon-decorativo pokemon-3">
+            🌿
+        </div>
+
+        <div class="pokemon-decorativo pokemon-4">
+            💧
+        </div>
+
+    </main>
+
+
+
+    <!-- ==============================
+         EXPERIENCIA AR
+    =============================== -->
+
+    <section class="pantalla-ar">
+
+        <button class="boton-volver">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Volver
+
+        </button>
+
+
+        <div class="titulo-seccion">
+
+            <span>EXPERIENCIA AR</span>
+
+            <h2>
+                ¡Has encontrado un Pokémon!
+            </h2>
+
+        </div>
+
+
+        <!-- VISOR DEL MODELO -->
+
+        <div class="visor-ar">
+
+            <div class="modelo-placeholder">
+
+                <i class="fa-solid fa-cube"></i>
+
+                <p>
+                    Aquí aparecerá el modelo 3D
+                </p>
+
+            </div>
+
+
+            <!--
+            Más adelante aquí pondremos:
+
+            <model-viewer
+                src="modelos/pikachu.glb"
+                ar
+                camera-controls>
+            </model-viewer>
+            -->
+
+        </div>
+
+
+        <!-- INFORMACIÓN DEL POKÉMON -->
+
+        <div class="pokemon-info">
+
+            <img
+                src="imagenes/pikachu.png"
+                alt="Pikachu"
+            >
+
+
+            <div class="pokemon-datos">
+
+                <span class="numero">
+                    #025
+                </span>
+
+                <h2>
+                    Pikachu
+                </h2>
+
+                <span class="tipo electrico">
+                    ⚡ Eléctrico
+                </span>
+
+                <p>
+                    Puede almacenar electricidad en sus
+                    mejillas y liberarla cuando se siente
+                    amenazado.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="acciones-pokemon">
+
+            <button class="boton boton-ar">
+
+                <i class="fa-solid fa-camera"></i>
+
+                Ver en AR
+
+            </button>
+
+
+            <button class="boton boton-guardar">
+
+                <i class="fa-solid fa-star"></i>
+
+                Guardar Pokémon
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==============================
+         COLECCIÓN
+    =============================== -->
+
+    <section class="pantalla-coleccion">
+
+        <button class="boton-volver">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Volver
+
+        </button>
+
+
+        <div class="titulo-seccion">
+
+            <span>MI COLECCIÓN</span>
+
+            <h2>
+                Mis Pokémon
+            </h2>
+
+            <p>
+                Pokémon descubiertos:
+                <strong>3</strong>
+            </p>
+
+        </div>
+
+
+        <!-- CARTAS -->
+
+        <div class="coleccion">
+
+
+            <!-- Pikachu -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/pikachu.png"
+                        alt="Pikachu"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#025</span>
+
+                    <h3>
+                        Pikachu
+                    </h3>
+
+                    <p>
+                        ⚡ Eléctrico
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Bulbasaur -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/bulbasaur.png"
+                        alt="Bulbasaur"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#001</span>
+
+                    <h3>
+                        Bulbasaur
+                    </h3>
+
+                    <p>
+                        🌿 Planta / Veneno
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Charmander -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/charmander.png"
+                        alt="Charmander"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#004</span>
+
+                    <h3>
+                        Charmander
+                    </h3>
+
+                    <p>
+                        🔥 Fuego
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- Gible -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/gible.png"
+                        alt="Gible"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#443</span>
+
+                    <h3>
+                        Gible
+                    </h3>
+
+                    <p>
+                        🐉 Dragon - 🟤 Tierra
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Gabite -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/gabite.png"
+                        alt="Gabite"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#444</span>
+
+                    <h3>
+                        Gabite
+                    </h3>
+
+                    <p>
+                        🐉 Dragon - 🟤 Tierra
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Garchomp -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/garchomp.png"
+                        alt="Garchomp"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#445</span>
+
+                    <h3>
+                        Garchomp
+                    </h3>
+
+                    <p>
+                        🐉 Dragon - 🟤 Tierra
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Scyther -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/scyther.png"
+                        alt="Scyther"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#123</span>
+
+                    <h3>
+                        Scyther
+                    </h3>
+
+                    <p>
+                        🦗 Bicho - 🍃 Volador
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Alcremie -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/alcremie.png"
+                        alt="Alcremie"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#868</span>
+
+                    <h3>
+                        Alcremie
+                    </h3>
+
+                    <p>
+                        🧚‍♀️ Hada
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- Eevee -->
+
+            <article class="pokemon-card">
+
+                <div class="card-imagen">
+
+                    <img
+                        src="imagenes/eevee.png"
+                        alt="Eevee"
+                    >
+
+                </div>
+
+
+                <div class="card-info">
+
+                    <span>#132</span>
+
+                    <h3>
+                        Eevee
+                    </h3>
+
+                    <p>
+                        ⚫ Normal
+                    </p>
+
+                    <button>
+                        Ver información
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+    <script
+        type="module"
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+    </script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
